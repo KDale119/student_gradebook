@@ -1,10 +1,11 @@
 import java.util.*;
 
-public class ListGradeBook extends Student{
+public class ListGradeBook{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<String> studentNames = new ArrayList<>();
         List<Double> grades = new ArrayList<>();
+
 
         getInfo(scanner, studentNames, grades);
         mean(grades);
@@ -12,13 +13,16 @@ public class ListGradeBook extends Student{
 
     }
     private static void getInfo(Scanner scanner, List<String> studentNames, List<Double> grades){
+        Student student = new Student();
         for (int i = 0; i < 10; i++) {
             System.out.print("\nEnter a Students Name (First Name, Last Name): ");
-            String name = scanner.nextLine();
-            studentNames.add(name);
+//            String name = scanner.nextLine();
+            student.setName(scanner.nextLine());
+            studentNames.add(student.getName());
             System.out.print("\nEnter their grade for quiz 1: ");
-            double grade = scanner.nextDouble();
-            grades.add((double) grade);
+//            double grade = scanner.nextDouble();
+            student.setGrade(scanner.nextDouble());
+            grades.add((double) student.getGrade());
             scanner.nextLine();
         }
     }

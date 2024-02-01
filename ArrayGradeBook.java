@@ -2,7 +2,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayGradeBook extends Student {
+public class ArrayGradeBook {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to teachers assistant");
@@ -20,7 +20,6 @@ public class ArrayGradeBook extends Student {
             String name = scanner.nextLine();
             studentNames[i] = name;
             System.out.print("\nEnter their grade for quiz 1: ");
-
             double grade = scanner.nextDouble();
             grades[i] = (double) grade;
             scanner.nextLine();
